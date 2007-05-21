@@ -1,11 +1,11 @@
 Summary:	Network Traffic sniffer, with pattern matching like grep
 Name:		ngrep
-Version:	1.44
-Release:	%mkrel 3
+Version:	1.45
+Release:	%mkrel 1
 License:	BSD
 Group:		Networking/Other
 URL:		http://ngrep.sourceforge.net/
-Source0:	http://prdownloads.sourceforge.net/ngrep/%{name}-%{version}-1.tar.bz2
+Source0:	http://prdownloads.sourceforge.net/ngrep/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-1.43-no-locincpth.diff.bz2
 BuildRequires:	libpcap-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
