@@ -8,6 +8,7 @@ URL:		http://ngrep.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/ngrep/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-1.43-no-locincpth.diff.bz2
 BuildRequires:	libpcap-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 ngrep strives to provide most of GNU grep's common features,
