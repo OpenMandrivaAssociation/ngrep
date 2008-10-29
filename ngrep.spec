@@ -34,14 +34,16 @@ for i in `find . -type d -name CVS` `find . -type f -name .cvs\*` `find . -type 
 done
 
 %build
-autoconf
+autoreconf -fis
 
-%configure2_5x
+%configure2_5x \
+    --enable-ipv6 \
+    --with-pcap-includes=%{_includedir}/pcap
 
 %make
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 install -d %{buildroot}%{_bindir}
 install -d %{buildroot}%{_mandir}/man8
@@ -50,7 +52,7 @@ install -m0755 %{name} %{buildroot}%{_bindir}/%{name}
 install -m0644 %{name}.8 -D %{buildroot}%{_mandir}/man8/%{name}.8
 
 %clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
