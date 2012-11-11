@@ -1,0 +1,13 @@
+--- configure.in	2005-02-24 05:25:20.000000000 +0100
++++ configure.in.oden	2005-05-13 18:14:56.891140168 +0200
+@@ -282,8 +282,8 @@
+ else
+    echo found $pcap_dir
+ 
+-   PCAP_INCLUDE="-I$pcap_dir"
+-   PCAP_LINK="-L`dirname $pcap_dir`/lib"
++   PCAP_INCLUDE=""
++   PCAP_LINK=""
+ 
+    AC_SUBST(PCAP_INCLUDE)
+    AC_SUBST(PCAP_LINK)
