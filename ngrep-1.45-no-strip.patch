@@ -1,0 +1,19 @@
+diff -urN ngrep-1.45/Makefile.in ngrep-1.45-patched/Makefile.in
+--- ngrep-1.45/Makefile.in	2006-11-28 23:35:37.000000000 +1000
++++ ngrep-1.45-patched/Makefile.in	2014-03-20 21:20:45.346789270 +1100
+@@ -39,13 +39,13 @@
+ all: $(TARGET) 
+ 
+ $(TARGET): $(REGEX_OBJS) $(OBJS) 
+-	$(CC) $(CFLAGS) $(LDFLAGS) $(STRIPFLAG) -o $(TARGET) $(OBJS) $(REGEX_OBJS) $(LIBS) 
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $(TARGET) $(OBJS) $(REGEX_OBJS) $(LIBS) 
+ 
+ debug: $(REGEX_OBJS) $(OBJS)
+ 	$(CC) $(CFLAGS) $(LDFLAGS) -g -o $(TARGET) $(OBJS) $(REGEX_OBJS) $(LIBS) 
+ 
+ static: $(REGEX_OBJS) $(OBJS)
+-	$(CC) $(CFLAGS) $(LDFLAGS) $(STRIPFLAG) -o $(TARGET).static -static $(OBJS) $(REGEX_OBJS) $(LIBS) 
++	$(CC) $(CFLAGS) $(LDFLAGS) -o $(TARGET).static -static $(OBJS) $(REGEX_OBJS) $(LIBS) 
+ 
+ install: $(TARGET)
+ 	$(INSTALL) -c -m 0755 $(TARGET)  $(DESTDIR)/$(BINDIR_INSTALL)/$(TARGET)
