@@ -1,7 +1,7 @@
 Summary:	Network Traffic sniffer, with pattern matching like grep
 Name:		ngrep
 Version:	1.45
-Release:	7
+Release:	8
 License:	BSD
 Group:		Networking/Other
 Url:		http://ngrep.sourceforge.net/
