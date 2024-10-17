@@ -4,7 +4,7 @@ Version:	1.45
 Release:	8
 License:	BSD
 Group:		Networking/Other
-Url:		http://ngrep.sourceforge.net/
+Url:		https://ngrep.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/ngrep/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-1.43-no-locincpth.diff
 Patch1:		ngrep-1.45-no-strip.patch
